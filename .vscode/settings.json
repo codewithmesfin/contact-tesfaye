@@ -1,0 +1,7 @@
+{
+    "git.ignoreLimitWarning": true,
+    "AllAutocomplete.showCurrentDocument": false,
+    "auto-close-tag.fullMode": true,
+    "files.autoSave": "afterDelay",
+    "editor.tabSize": 2
+}

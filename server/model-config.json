@@ -1,0 +1,47 @@
+{
+  "_meta": {
+    "sources": [
+      "loopback/common/models",
+      "loopback/server/models",
+      "../common/models",
+      "./models"
+    ],
+    "mixins": [
+      "loopback/common/mixins",
+      "loopback/server/mixins",
+      "../common/mixins",
+      "./mixins"
+    ]
+  },
+  "Account": {
+    "dataSource": "mongodb",
+    "public": true
+  },
+  "Company": {
+    "dataSource": "mongodb",
+    "public": true
+  },
+  "Employee": {
+    "dataSource": "mongodb",
+    "public": true
+  },
+  "ACL": {
+    "dataSource": "mongodb",
+    "public": false
+  },
+  "AccessToken": {
+    "dataSource": "mongodb",
+    "public": false,
+    "relations": {
+      "accounts": {
+        "type": "belongsTo",
+        "model": "user",
+        "foreignKey": "userId"
+      }
+    }
+  },
+  "Image": {
+    "dataSource": "local-storage",
+    "public": true
+  }
+}
